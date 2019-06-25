@@ -1,0 +1,630 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Nghia Doan">
+
+    <title>Nghia Doan</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+
+<body>
+    <!-- Navigation begins -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toogle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="" onclick=$("#menu-close").click();>Nghia Doan</a>
+            </li>
+            <li>
+                <a href="#home" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="#summary" onclick=$("#menu-close").click();>Summary</a>
+            </li>
+            <li>
+                <a href="#work" onclick=$("#menu-close").click();>Experience</a>
+            </li>
+            <li>
+                <a href="#publications" onclick=$("#menu-close").click();>Publications</a>
+            </li>
+            <li>
+                <a href="#awards" onclick=$("#menu-close").click();>Awards</a>
+            </li>
+            <li>
+                <a href="#projects" onclick=$("#menu-close").click();>Projects</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navigation ends -->
+
+    <!-- Home begins -->
+    <header id="home" class="header">
+        <div class="blurImg">
+            <div class="image"></div>
+            <div class="blur blurimage"></div>
+        </div>
+
+        <div class="text-vertical-center">
+            <img class="img-responsive img-circle center-block grow" src="img/nghia_profile.png" width="250px" alt="">
+            <h1>Nghia Doan</h1>
+            <h3>Ph.D. Candidate, McGill University</h3>
+            <br>
+            <a target="_blank" href="https://bitbucket.org/nghiadt05"><span class="fab fa-bitbucket fa-2x" aria-hidden="true"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="https://www.linkedin.com/in/doantrungnghia05"><span class="fab fa-linkedin-square fa-2x"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="https://scholar.google.ca/citations?user=rM-FvcgAAAAJ&hl=en"><span class="fab fa-google fa-2x"
+                    aria-hidden="true"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="https://www.researchgate.net/profile/Nghia_Doan3"><span class="fab fa-researchgate fa-2x"
+                    aria-hidden="true"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" href="mailto:nghia.doan@mail.mcgill.ca"><span class="fas fa-envelope fa-2x" aria-hidden="true"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+            <a href="#summary" class="btn page-scroll">
+                <i class="fa fa-angle-double-down animated"></i>
+            </a>
+        </div>
+    </header>
+    <!-- Home ends -->
+
+    <!-- Summary begins -->
+    <section id="summary" class="summary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <i class="fas fa-university fa-4x"></i>
+                    <h2>Summary</h2>
+                    <hr>
+
+                    <p ALIGN=JUSTIFY>
+                        Welcome to my homepage! I am currently a Ph.D candidate at the Department of Electrical and
+                        Computer Engineering of McGill University, Canada.
+                        I am also a graduate research assistant at <a target="_blank" href="http://www.isip.ece.mcgill.ca/people.html">ISIP</a>
+                        lab under the supervision of Professor <a target="_blank" href="https://www.mcgill.ca/ece/warren-gross">Warren J. Gross</a>.
+                    </p>
+
+                    <p ALIGN=JUSTIFY>
+                        Prior to joining McGill I obtained my M.Sc. and B.Sc. degrees at Seoul National University,
+                        South Korea and Posts & Telecommunications Institute of Technology, Vietnam in 2017 and 2014,
+                        respectively. All of my degrees are in Electrical and Computer Engineering.
+                    </p>
+
+                    <p ALIGN=JUSTIFY>
+                        My primary research interests include customized deep-learning algorithm design, hardware-aware
+                        algorithm optimization, and VLSI implementation for channel decoding and digital signal
+                        processing applications.                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Summary ends -->
+
+    <!-- Work begins -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="row" id="workheading">
+                <div class="col-lg-12 text-center">
+                    <i class="fas fa-building fa-4x"></i>
+                    <h2>Experience</h2>
+                    <hr>
+                    <p style="text-align:left;">
+                        <b>Research & Development</b>
+                    </p>
+                    <p style="text-align:left;">
+                        Graduate Researcher, Intergrated Systems for Information Processing (<a target="_blank" href="http://www.isip.ece.mcgill.ca/people.html">ISIP</a>)
+                        Lab, McGill University, Canada
+                        <span style="float:right;">Sept 2017 - present</span>
+                    </p>
+                    <p style="text-align:left;">
+                        Graduate Researcher, Computer Architecture and Parallel Processing (<a target="_blank" href="http://capp.snu.ac.kr/?p=people">CAPP</a>)
+                        Lab, Seoul National University, Korea
+                        <span style="float:right;">Mar 2015 - Feb 2017</span>
+                    </p>
+                    <p style="text-align:left;">
+                        Embedded System Engineer, <a target="_blank" href="http://www.tosy.com/">TOSY</a>, Vietnam
+                        <span style="float:right;">Aug 2014 - Jan 2015</span>
+                    </p>
+                    <!-- <p style="text-align:left;">
+                    Engineering Intern Student, <a target="_blank" href="http://vnpt-technology.vn/HomeAction?request_locale=en">VNPT Technology</a>, Hanoi, Vietnam
+                    <span style="float:right;">July 2013 - Dec 2013</span>
+                </p> -->
+                    </br>
+                    <p style="text-align:left;">
+                        <b>Teaching Assistant</b>
+                    </p>
+                    <p style="text-align:left;">
+                        ECSE 210: Electric Circuits 2 (<a target="_blank" href="./ta_feedbacks/ECSE210_W19.pdf">fdbk</a>,
+                        <a target="_blank" href="./ta_feedbacks/ECSE210_W19_1.pdf">comments</a>), McGill University, Canada
+                        <span style="float:right;">Jan 2019 - April 2019</span>
+                    </p>
+                    <p style="text-align:left;">
+                        ECSE 200: Electric Circuits 1 (<a target="_blank" href="./ta_feedbacks/ECSE200_F18.pdf">fdbk</a>,
+                        <a target="_blank" href="./ta_feedbacks/ECSE200_F18_1.pdf">comments</a>), McGill University,
+                        Canada
+                        <span style="float:right;">Sept 2018 - Dec 2018</span>
+                    </p>
+                    <p style="text-align:left;">
+                        ECSE 426: Microprocessor Systems (<a target="_blank" href="./ta_feedbacks/ECSE426_W18.pdf">fdbk</a>,
+                        <a target="_blank" href="./ta_feedbacks/ECSE426_W18_1.pdf">comments</a>), McGill University,
+                        Canada
+                        <span style="float:right;">Jan 2018 - April 2018</span>
+                    </p>
+                    <p style="text-align:left;">
+                        ECSE 323: Digital System Design (<a target="_blank" href="./ta_feedbacks/ECSE323_F17.pdf">fdbk</a>,
+                        <a target="_blank" href="./ta_feedbacks/ECSE323_F17_1.pdf">comments</a>), McGill University,
+                        Canada
+                        <span style="float:right;">Sept 2017 - Dec 2018</span>
+                    </p>
+
+                    <!-- Journal reviewer -->                        
+                    </br>
+                    <p style="text-align:left;">
+                        <b>Journal Reviewer</b>
+                    </p>
+                    <p style="text-align:left;">
+                        IEEE Access
+                    </p>                    
+                    <p style="text-align:left;">
+                        IEEE Communications Letters                            
+                    </p>
+
+                    <!-- Conference reviewer -->                        
+                    </br>
+                    <p style="text-align:left;">
+                        <b>Conference Reviewer</b>
+                    </p>
+					<p style="text-align:left;">
+                        IEEE International Symposium on Information Theory (ISIT)
+                    </p>
+                    <p style="text-align:left;">
+                        IEEE Wireless Communications and Networking Conference Workshops (WCNCW)
+                    </p>                                        
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Work ends -->
+
+    <!-- publications begin -->
+    <section id="publications" class="work">
+        <div class="container">
+            <div class="row" id="publicationsheading">
+                <div class="col-lg-12 text-center">
+                    <i class="fas fa-scroll fa-4x"></i>
+                    <h2>Publications</h2>
+                    <hr>
+
+                    <p style="text-align:left;">
+                        <b>Book Chapter</b>
+                    </p>
+                    <p style="text-align:left;">
+                        [b1] W. J. Gross, <u>N. Doan</u>, E. N. Mambou, and S. A. Hashemi
+                        <b>
+                            "Overview of Deep Learning Techniques for Decoding Polar Codes"
+                        </b>,
+                        <i>Wiley</i>, 2019 (submitted).
+                        <!-- (<a target="_blank" href="./publications/DOAN_Wiley18.pdf">pdf</a>) -->
+                    </p>
+                </br>                    
+                    <p style="text-align:left;">
+                        <b>Journal Papers</b>
+                    </p>
+                    <p style="text-align:left;">
+                        [j2] <u>N. Doan</u>, T. S. Kim, C. E. Rhee, and H.J. Lee,
+                        <b>"A hardware-oriented concurrent TZ search algorithm for High-Efficiency Video Coding"</b>,
+                        <i>EURASIP Journal on Advances in Signal Processing</i>,
+                        2017(1), pp.78, 2017.
+                        (<a target="_blank" href="./publications/DOAN_EURASIP17.pdf">pdf</a>)
+                    </p>
+                    <p style="text-align:left;">
+                        [j1] <u>N. Doan</u>, S. Kim, C. V. Le, and H.J. Lee,
+                        <b>
+                            "Anomalous Trajectory Detection in Surveillance Systems Using Pedestrian and Surrounding
+                            Information"
+                        </b>,
+                        <i>IEIE Transactions on Smart Processing & Computing</i>,
+                        5(4), pp.256-266, 2016. 
+                        (<a target="_blank" href="./publications/DOAN_TSPC16.pdf">pdf</a>)
+                    </p>
+                    </br>
+
+                    <p style="text-align:left;">
+                        <b>Conference Papers</b>
+                    </p>
+                    <p style="text-align:left;">
+                        [c7] <u>N. Doan</u>, S. A. Hashemi, F. Ercan, T. Tonnellier, W. J. Gross,
+                        <b>"Neural Dynamic Successive Cancellation Flip Decoding of Polar Codes"</b>,
+                        <i>IEEE International Workshop on Signal Processing Systems (SiPS)</i>,
+                        Nanjing, China, 2019, invited paper, submitted.
+                    </p>                   
+                    <p style="text-align:left;">
+                        [c6] <u>N. Doan</u>, S. A. Hashemi, E. N. Mambou, T. Tonnellier, W. J. Gross,
+                        <b>"Neural Belief Propagation Decoding of CRC-Polar Concatenated Codes"</b>,
+                        <i>IEEE International Conference on Communications (ICC)</i>,
+                        Shanghai, China, 2019, to appear.
+                        (<a target="_blank" href="https://arxiv.org/pdf/1811.00124.pdf">pdf</a>,
+                        <a target="_blank" href="./publications/DOAN_ICC19_talk.pdf">talk</a>)
+                    </p>
+                    <p style="text-align:left;">
+                        [c5] <u>N. Doan</u>, S. A. Hashemi, M. Mondelli, and W. J. Gross,
+                        <b>"On the Decoding of Polar Codes on Permuted Factor Graphs"</b>,
+                        <i>IEEE Global Communications Conference (GLOBECOM)</i>,
+                        Abu Dhabi, UAE, 2018.
+                        (<a target="_blank" href="./publications/DOAN_GLOCOM18.pdf">pdf</a>, 
+                        <a target="_blank" href="./publications/DOAN_Globecom18_presentation.pdf">talk</a>)
+                    </p>                        
+                    <p style="text-align:left;">
+                        [c4] S. A. Hashemi, <u>N. Doan</u>, M. Mondelli, and W. J. Gross,
+                        <b>"Decoding Reed-Muller and Polar Codes by Successive Factor Graph Permutations"</b>,
+                        <i>IEEE International Symposium on Turbo Codes & Iterative Information Processing (ISTC)</i>,
+                        Hong Kong, China, 2018, pp. 1-5.
+                        (<a target="_blank" href="./publications/ALI_ISTC18.pdf">pdf</a>, 
+                        <a target="_blank" href="./publications/ISTC2018-Slides.pdf">talk</a>)
+                    </p>                    
+                    <p style="text-align:left;">
+                        [c3] <u>N. Doan</u>, S. Ali Hashemi and W. J. Gross,
+                        <b>"Neural Successive Cancellation Decoding of Polar Codes"</b>,
+                        <i>
+                            IEEE 19th International Workshop on Signal Processing Advances in Wireless Communications
+                            (SPAWC)
+                        </i>,
+                        Kalamata, Greece, 2018, pp. 1-5.
+                        (<a target="_blank" href="./publications/DOAN_SPAWC18.pdf">pdf</a>, 
+                        <a target="_blank" href="./publications/DOAN_SPAWC18_poster.pdf">poster</a>)
+                    </p>
+                    <p style="text-align:left;">
+                        [c2] C. V. Le, Q. N. Hong, T. T. Quang and <u>N. Doan</u>,
+                        <b>"Superpixel-based background removal for accuracy salience person re-identification"</b>,
+                        <i>IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)</i>,
+                        Seoul, South Korea, 2016, pp. 1-4.
+                        (<a target="_blank" href="./publications/DOAN_ICCE-Asia16.pdf">pdf</a>)
+                    </p>
+                    <p style="text-align:left;">
+                        [c1] <u>N. Doan</u>, T. S. Kim, H. J. Lee and S. Chae,
+                        <b>
+                            "A modified TZ search algorithm for parallel integer motion estimation in high efficiency
+                            video coding"
+                        </b>,
+                        <i>IEEE International SoC Design Conference (ISOCC)</i>,
+                        Gyungju, South Korea, 2015, pp. 97-98.
+                        (<a target="_blank" href="./publications/DOAN_ISOCC15.pdf">pdf</a>)
+                    </p>                    
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- publications end -->
+
+    <!-- awards begin -->
+    <section id="awards" class="work">
+        <div class="container">
+            <div class="row" id="awardsheading">
+                <div class="col-lg-12 text-center">
+                    <i class="fas fa-award fa-4x"></i>
+                    <h2>Awards</h2>
+                    <hr>
+                    <p style="text-align:left;">
+                        <b>Student Travel Grant</b>, IEEE Signal Processing Society, USA
+                        <span style="float:right;">July 2018</span>
+                    </p>
+                    <p style="text-align:left;">
+                        <b>McGill Engineering Doctoral Award</b>, McGill University, Canada
+                        <span style="float:right;">Sept 2017</span>
+                    </p>
+                    <p style="text-align:left;">
+                        <b>Dean Fellowship</b>, University of California, Riverside, USA (declined)
+                            <span style="float:right;">Sept 2017</span>
+</p>
+                    <p style="text-align:left;">
+                        <b>A-san Foundation Scholarship</b>, A-san Group, South Korea
+                        <span style="float:right;">Mar 2016</span>
+                    </p>
+                    <p style="text-align:left;">
+                        <b>Shin-yang Foundation Scholarship</b>, Shin-yang Group, South Korea (declined)
+                        <span style="float:right;">Mar 2016</span>
+                    </p>
+                    <p style="text-align:left;">
+                        <b>Samsung Electronics Award</b>, Samsung Group, South Korea
+                        <span style="float:right;">Oct 2015</span>
+                    </p>
+                    <p style="text-align:left;">
+                        <b>Scholarships for Academic Excellence</b>, Posts & Telecommunications Institute of Technology,
+                        Vietnam
+                        <span style="float:right;">2009-2014</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- awards end -->
+
+    <!-- Projects Image begins-->
+    <section id="projectimage" class="content-section text-center">
+        <div class="text-container">
+            <p><strong>Selected Projects</strong></p>
+        </div>
+    </section>
+    <!-- Projects Image ends -->
+
+    <!-- Projects begins -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="row" id="projectsheading">
+                <div class="col-lg-12 text-center">
+                    <i class="fa fa-code fa-4x"></i>
+                    <h2>Projects</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <img class="img-responsive img-circle center-block grow" src="img/rsz_nbpne.png" width="150px" alt=""></a>
+                    <h2><span>Joint Neural Belief Propagation Decoder and Channel Equalizer for Polar Codes Decoding</span><br>
+                        <small>Dec 2018</small><br>
+                        <!-- <small><a target="_blank" href="https://bitbucket.org/nghiadt05/hieratdcappv1/src/master/">BitBucket</a></small> -->
+                    </h2>
+                    <p class="lead" style="text-align:justify;">
+                        Polar codes are the first class of codes that was proven to achieve Shannon limit at infinite
+                        code length for any binary memoryless channel.
+                        In this project, the decoding of polar codes is considered through belief propagation (BP)
+                        which can guarantee a high decoding throughput.
+                        However, one problem associated with BP decoding is its undesirable performance given a small
+                        number of iterations.
+                        To address this issue, we propose a neural BP decoder concatenated with a recursive neural
+                        network (RNN) based channel noise estimator to impose performance gain compared to some
+                        state-of-the-art decoders while maintaining a reasonable decoding latency.
+                        At a frame error rate (FER) of 10<sup>-5</sup>, the experiment results illustrate a gain of
+                        about 0.25 dB and 0.5 dB over neural BP and neural offset min-sum decoders, respectively.
+                        Detailed information can be found in this <a target="_blank" href="./publications/ECSE652Poster.pdf">poster</a>.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img class="img-responsive img-circle center-block grow" src="img/rsz_cnn.png" width="150px" alt=""></a>
+                    <h2><span>A Baseline VLSI Implementation of CNN</span><br>
+                        <small>Dec 2017</small><br>
+                        <small><a target="_blank" href="https://bitbucket.org/nghiadt05/baselinecnn/src/master/">BitBucket</a></small>
+                    </h2>
+                    <p class="lead" style="text-align:justify;">
+                        In this project, a baseline VLSI implementation of a convolutional neural network (CNN) model trained on the <a target="_blank"
+                            href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR10</a> dataset is studied.
+                        This project allows flexible design choices to exploit the complicated trade-off among CNN model
+                        complexity, prediction accuracy, fixed-point hardware model and hardware cost.
+                        A comparison of a conventional VLSI implementation using multiplication and
+                        accumulation (MAC) units and an implementation based on systolic arrays is also considered.
+                        The analysis showed that under specific design choices, the MAC-based architecture always has
+                        smaller prediction latency than that of the systolic array architecture, while both
+                        achitectures preserve the prediction accuracy of the software CNN model.
+                        Further details can be found in the project <a target="_blank" href="./publications/Doan_BaselineCNN.pdf">report</a>.
+                        In addition, you can also find a baseline VLSI implementation of a multilayer perceptron (MLP) in this <a target="_blank"
+                            href="https://bitbucket.org/nghiadt05/baselinemlp/src">project</a>.
+                    </p>
+                </div>
+            </div>
+            </br>
+            </br>
+
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <img class="img-responsive img-circle center-block grow" src="img/rsz_abnormaltrack.png" width="150px"
+                        alt=""></a>
+                    <h2><span>Abnormal Pedestrians Behaviour Detection</span><br>
+                        <small>August 2016</small><br>
+                        <small><a target="_blank" href="https://bitbucket.org/nghiadt05/hieratdcappv1/src/master/">BitBucket</a></small>
+                    </h2>
+                    <p class="lead" style="text-align:justify;">
+                        The amount of data obtained from surveyllance cameras is way beyond human capability to
+                        manually annotate abnormal behaviours such as law breaking activities, traffic accidents, etc.
+                        Fortunately with the help of deep learning techinques, it is possible to detect such abnormal
+                        behaviours in an automated manner.
+                        In this project, the abovementioned idea is exploited by incorporating conventional
+                        computervision techniques such as super-pixel image segmentation into off-the-shelf deep
+                        learning models.
+                        First, a human prohibited map is constructed automatically for each camera by an online
+                        learning algorithm.
+                        This map is used to detect pedestrians who enter the learned restricted regions.
+                        Second, another deep learning model is trained to classify abnormal pedestrian behavious by
+                        analyzing their trajectories.
+                        This model can detect anomalous behaviours regarding the trajactory directions and speeds
+                        of the coressponding pedestrians.
+                        The experimental results can be found in the following demonstrations: <a target="_blank" href="https://www.youtube.com/watch?v=fgaiMX_agDg">prohibited
+                            area detection</a>, <a target="_blank" href="https://www.youtube.com/watch?v=NWjp76XUA4c">abnormal
+                            trajectory detection</a>.
+                    </p>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img class="img-responsive img-circle center-block grow" src="img/rsz_quadcopter.png" width="150px"
+                        alt=""></a>
+                    <h2><span>Quadcopter</span><br>
+                        <small>August 2014</small><br>
+                        <small><a target="_blank" href="https://bitbucket.org/nghiadt05/quadcopterv2/src/master/">BitBucket</a></small>
+                    </h2>
+                    <p class="lead" style="text-align:justify;">
+                        Building a quadcopter has been one of my dreams for a long time.
+                        Just imagine how cool it is to have your own quadcopter, for which you design your customized PCBs, solder
+                        the component and connect everything together with thousands of code lines.
+                        I have built my quadcopter nearly from scratch and I would say it is more than just
+                        satisfactory when you see it touches the sky.
+                        <!-- In fact it has a mix of feelings: proudness, happiness, and pure joy. -->
+                        Through this project I have learned a great deal of knowledge in both theory and practice.
+                        The most challenging part of this project is sensor fusion, where you have to apply digital
+                        filters to raw sensor data to obtain the geometry state of the quadcopter i.e. yaw, pich, and roll
+                        angles.
+                        In addition, this project helps me in mastering a wide range of microprocessors, including
+                        the ATMEL ATmega and ARM Cortex M-serie chips.
+                        You can find it is quite funny to see my quadcopter's <a target="_blank" href="https://www.youtube.com/watch?v=0fP314fJlzo&list=PLCi9WPlUkgh2t0bs-l46DQJkUFqSPvylu&index=19">first
+                            attempt</a> to fly,
+                        and <a target="_blank" href="https://www.youtube.com/watch?v=v4bNYTyeoJA&list=PLCi9WPlUkgh2t0bs-l46DQJkUFqSPvylu&index=1">here</a>
+                        is the latest version of my quadcopter after almost one year of improvements &#9786;.
+                        Please also refer to the project <a target="_blank" href="https://bitbucket.org/nghiadt05/quadcopterv2/src/master/">reposistory</a>
+                        and this series of documentary <a target="_blank" href="https://www.youtube.com/playlist?list=PLCi9WPlUkgh2t0bs-l46DQJkUFqSPvylu">videos</a>
+                        for more details.
+                    </p>
+                </div>
+            </div>
+            </br>
+            </br>
+
+        </div>
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Projects ends -->
+
+    <!-- Footer begins -->
+    <footer>
+        <div class="container text-center">
+            <p>This webpage was built using <a target="_blank" href="https://github.com/agrawal-priyank/personal-website-templates">Priyank's
+                    template</a>. The background picture is Turtle Tower in Hanoi, Vietnam and is credited to <a target="_blank"
+                    href="http://tour.ntdtravel.com.vn/">NTD Travel</a>. </p>
+            <p>Copyright &copy; 2018 Nghia Doan</p>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+
+    <!-- Bact to top begins -->
+    <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <!-- Bact to top ends -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function (e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function () {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function () {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function () {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function () {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function (event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function (event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
+    <!-- Blur Function -->
+    <script type="text/javascript">
+        (function () {
+            $(window).scroll(function () {
+                var oVal;
+                oVal = $(window).scrollTop() / 500;
+                return $('.blur').css('opacity', oVal);
+            });
+        }.call(this));
+    </script>
+
+    <!-- Back to top -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('#back-to-top').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+            $('#back-to-top').tooltip('show');
+        });
+    </script>
+</body>
+
+</html>
