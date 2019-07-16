@@ -8,8 +8,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "/home/nghiadt/nghiadt05.bitbucket.io/index.html",
-            "webRoot": "/home/nghiadt/nghiadt05.bitbucket.io/"
+            "url": "${workspaceFolder}/index.html",
+            "webRoot": "${workspaceFolder}/index.html"
         }
     ]
 }
