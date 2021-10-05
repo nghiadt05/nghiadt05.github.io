@@ -1,0 +1,355 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{pifont}
+\usepackage{marvosym}
+
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+{\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+{\vspace{-\baselineskip}\begin{list}{}{%
+			\setlength{\leftmargin}{\bibhang}%
+			\setlength{\itemindent}{-\leftmargin}%
+			\setlength{\itemsep}{\bibsep}%
+			\setlength{\parsep}{\z@}%
+			\setlength{\partopsep}{0pt}%
+			\setlength{\topsep}{0pt}}}
+	{\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+%\usepackage[paper=letterpaper,
+%           %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=0.7in,     % Length of section titles
+%            marginparsep=.05in,       % Space between titles and text
+%            margin=0.5in,               % 1 inch margins
+%            includemp]{geometry}
+
+% Use these lines for A4-sized paper
+\usepackage[paper=a4paper,
+%includefoot, % Uncomment to put page number above margin
+marginparwidth=24mm,    % Length of section titles
+marginparsep=1mm,       % Space between titles and text
+margin=15mm,              % 25mm margins
+includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+\usepackage[shortlabels]{enumitem}
+% \usepackage[misc]{ifsym}
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+{0.1\textwidth+0.1\marginparsep+0.1\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+	\parbox{3.5in}{\, \hfill %
+		\arabic{page} of \protect\pageref*{LastPage} % +LP
+		%                    \arabic{page}                               % -LP
+		\hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+	linkcolor=darkblue,urlcolor=darkblue,
+	anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+{\hspace*{-\marginparsep minus \marginparwidth}%
+	\begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+		{\large \bfseries #1}\\[-0.15\baselineskip]%
+		\rule{\columnwidth}{1pt}%
+\end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+{\pagebreak[2]\vspace{1\baselineskip}%
+	\phantomsection\addcontentsline{toc}{section}{#1}%
+	\hspace{0in}%
+	\marginpar{
+		\raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+{\begin{itemize}[#1]}{\end{itemize}%
+	\vspace{-0.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+{\vspace{-\baselineskip}\begin{list}{#1}{%
+			\setlength{\partopsep}{0pt}%
+			\setlength{\topsep}{0pt}}}
+	{\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+% \newenvironment{innerlist}[1][\enskip\textbullet]%
+\newenvironment{innerlist}[1][\enskip$\circ$]%
+{\begin{compactitem}[#1]}{\end{compactitem}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+{\vspace{-\baselineskip}\begin{compactitem}[#1]}
+	{\end{compactitem}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\hyphenpenalty = 9999
+\def\vs{\vspace{-0.1in}}
+\begin{document}
+	% \makeheading{Curriculum Vitae\\ [0.3cm] TIEP HUU VU\quad~~~~~~\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad{\small Last update: December 17, 2015}}
+	\makeheading{Nghia Doan \hfill {\small Last update: October 5, 2021}}
+	
+	%% =======================================
+	\section{Contact Information}	
+	\newlength{\rcollength}\setlength{\rcollength}{3 in}
+	\vs	
+	\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+	\texttt{E-mail:}\href{mailto:nghia.doan@mail.mcgill.ca}{nghia.doan@mail.mcgill.ca}\\
+	\texttt{Google Scholar:}\href{https://scholar.google.com/citations?user=rM-FvcgAAAAJ&hl=en}{https://scholar.google.com} \texttt{Linkedin:}\href{https://www.linkedin.com/in/nghiadt05}{https://www.linkedin.com/in/nghiadt05}
+	\texttt{Homepage:}\href{https://nghiadt05.github.io}{https://nghiadt05.github.io}
+	\end{tabular}
+
+	%% =======================================
+	\section{Education}
+	\href{https://www.mcgill.ca/}{\textbf{McGill University}}, Montr\'eal, Queb\'ec, Canada \hfill 2017--2022 (expected)
+	\begin{outerlist}
+		\item Ph.D. in Electrical and Computer Engineering, GPA: {\bf 3.4/4.0}.
+		\item Advisor: Professor \href{https://www.mcgill.ca/ece/warren-gross}{Warren Gross}. 
+	\end{outerlist}
+	
+	\vspace{0.1in}
+	\href{https://en.snu.ac.kr/}{\textbf{Seoul National University}}, Seoul, South Korea \hfill 2015--2017
+	\begin{outerlist}
+		\item MSc in Electrical and Computer Engineering, GPA: {\bf 3.9/4.3}.
+		\item Advisor: Professor \href{http://capp.snu.ac.kr/}{Hyuk-Jae Lee}. 
+	\end{outerlist}
+
+	\vspace{0.1in}
+	\href{https://en.snu.ac.kr/}{\textbf{Posts \& Telecommunications Institute of Technology}}, Hanoi, Vietnam \hfill 2009--2014
+	\begin{outerlist}
+		\item B.Eng. in Electrical and Computer Engineering, GPA: {\bf 8.7/10.0} (top of class).
+	\end{outerlist}
+
+	%% =======================================
+	\section{Honors and Awards}
+	\vspace{-0.25in}
+	\begin{outerlist}
+		\item \textbf{\textit{McGill Engineering Doctoral Award}} \hfill 2017
+		\item \textbf{\textit{A-san Foundation Scholarship}} \hfill 2016
+		\item \textbf{\textit{Samsung Electronics Award}} \hfill 2015
+		\item \textbf{\textit{Scholarships for Academic Excellent}} \hfill 2009-2014		
+	\end{outerlist}
+	%% =======================================
+	\section{Technical Skills} % (fold)
+	\label{sec:technical_ski}
+	\vspace{-0.25in}
+	\begin{outerlist}
+		\item {\it Programming Languages}: C/C++, Python, Assembly, VHDL.
+		\item {\it Softwares and Libraries}: PyTorch, TensorFlow, MATLAB, OpenCV.
+	\end{outerlist}
+	%% =========  ==============================
+	\section{Research Topics} % (fold)
+	\label{sec:research_exper}
+	\vspace{-0.25in}
+	\begin{outerlist}
+		\item {\bf High-Performance Decoding of Short Linear Block Codes with Machine Learning} \hfill 2017--present\\
+		Utilizing state-of-the-art machine learning techniques in the design of high-performance decoding algorithms for short linear block codes, which are targeted for 5G-and-beyond communications standards.
+	\end{outerlist}
+	\begin{outerlist}
+		\item {\bf Abnormal Pedestrian Detection Using Surveillance Video Data} \hfill 2016--2017\\
+		Design an automated deep learning algorithm that can detect abnormal behaviors of pedestrians including entering prohibited area, running, and moving with abnormal directions.
+	\end{outerlist}
+	\begin{outerlist}
+		\item {\bf Hardware-Friendly Encoding Algorithms of High-Efficiency Video Coding (HEVC)} \hfill 2015--2016\\
+		Design a hardware-friendly integer motion estimation engine used in the HEVC standard.
+	\end{outerlist}
+	
+	%% ================== block:  ==========================
+	\section{Selected Publications}
+	\vspace{-.25in}
+	\begin{itemize}
+		\item[]\textbf{Book Chapter}
+		\begin{enumerate}
+			\item W. J. Gross, \underline{N. Doan}, E. N. Mambou, and S. A. Hashemi, "Deep Learning Techniques for Decoding Polar Codes", Wiley, 2019.
+		\end{enumerate}
+	
+		\item[]\textbf{Journal Papers}
+		\begin{enumerate}			
+			\item \underline{N. Doan}, S. A. Hashemi, and W. J. Gross, "Efficient Soft-Input Soft-Output Decoding of CRC-Polar Concatenated Codes", IEEE Communications Letters, \textbf{{under preparation}}.
+			
+			\item \underline{N. Doan}, S. A. Hashemi, and W. J. Gross, "Decoding Reed-Muller Codes with Successive Factor-Graph Permutations", IEEE Transactions on Communications, \textbf{{submitted}}.
+						
+			\item \underline{N. Doan}, S. A. Hashemi, and W. J. Gross, "Successive-Cancellation Decoding of Reed-Muller Codes with Fast Hadamard Transform", IEEE Transactions on Vehicular Technologies, \textbf{{submitted}}.
+			
+			\item  \underline{N. Doan}, S. A. Hashemi, and W. J. Gross, "Fast Successive-Cancellation List Flip Decoding of Polar Codes", IEEE Access, \textbf{{submitted}}.
+			
+			\item \underline{N. Doan}, S. A. Hashemi, F. Ercan, T. Tonnellier, and W. J. Gross, "Neural Successive-Cancellation Flip Decoding of Polar Codes", {{Journal of Signal Processing Systems}}, 2020.
+			
+			\item F. Ercan, T. Tonnellier, \underline{N. Doan}, W. J. Gross, "Practical Dynamic SC-Flip Polar Decoders: Algorithm and Implementation", {{IEEE Transactions on Signal Processing, 2020}}.
+			
+			\item \underline{N. Doan}, T. S. Kim, C. E. Rhee, and H.-J. Lee, "A hardware-oriented concurrent TZ search algorithm for High-Efficiency Video Coding", EURASIP Journal on Advances in Signal Processing, 2017.
+			
+			\item \underline{N. Doan}, S. Kim, L. C. Vo, and H.-J. Lee, "Anomalous Trajectory Detection in Surveillance Systems Using Pedestrian and Surrounding Information", IEIE Transactions on Smart Processing and Computing, 2016.
+		\end{enumerate}
+	  
+		\item[]\textbf{Conference Papers}
+		\begin{enumerate}
+			\item S. A. Hashemi, \underline{N. Doan}, W. J. Gross, J. Cioffi, and A. Goldsmith, "A Tree Search Approach for Maximum-Likelihood Decoding of Reed-Muller Codes", IEEE Globecom: Workshop on Channel Coding beyond 5G, Madrid, Spain, 2021 (to appear).
+						
+			\item \underline{N. Doan}, S. A. Hashemi, F. Ercan, and W. J. Gross, "Fast SC-Flip Decoding of Polar Codes with Reinforcement Learning", IEEE International Conference on Communications (ICC), Montreal, Canada, 2021.
+			
+			\item T. Tonnellier, M. Hashemipour, \underline{N. Doan}, W. J. Gross, and A. Balatsoukas-Stimming, "Towards Practical Near-Maximum-Likelihood Decoding of Error-Correcting Codes: An Overview", IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Toronto, Canada, 2021.
+			
+			\item \underline{N. Doan}, S. A. Hashemi, and W. J. Gross, "Decoding of Polar Codes with Reinforcement Learning", IEEE Global Communications Conference (GLOBECOM), Taipei, Taiwan, 2020.
+			
+			\item F. Ercan, T. Tonnellier, \underline{N. Doan}, and W. J. Gross, "Simplified Dynamic SC-Flip Polar Decoding", IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, 2020.
+			
+			\item \underline{N. Doan}, S. A. Hashemi, F. Ercan, T. Tonnellier, and W. J. Gross, "Neural Dynamic Successive Cancellation Flip Decoding of Polar Codes", IEEE International Workshop on Signal Processing Systems (SiPS), Nanjing, China, 2019.
+
+			\item \underline{N. Doan}, S. A. Hashemi, E. N. Mambou, T. Tonnellier, and W. J. Gross, "Neural Belief Propagation Decoding of CRC-Polar Concatenated Codes", IEEE International Conference on Communications (ICC), Shanghai, China, 2019.			
+			
+			\item \underline{N. Doan}, S. A. Hashemi, M. Mondelli, and W. J. Gross, "On the Decoding of Polar Codes on Permuted Factor Graphs", IEEE Global Communications Conference (GLOBECOM), Abu Dhabi, UAE, 2018.
+			
+			\item S. A. Hashemi, \underline{N. Doan}, and W. J. Gross, "Deep-Learning-Aided Successive-Cancellation Decoding of Polar Codes", Asilomar Conference on Signals, Systems, and Computers, Pacific Grove, USA, 2019.
+			
+			\item S. A. Hashemi, \underline{N. Doan}, M. Mondelli, and W. J. Gross, "Decoding Reed-Muller and Polar Codes by Successive Factor Graph Permutations", IEEE International Symposium on Turbo Codes \& Iterative Information Processing (ISTC), Hong Kong, China, 2018.
+			
+			\item \underline{N. Doan}, S. Ali Hashemi and W. J. Gross, "Neural Successive Cancellation Decoding of Polar Codes", IEEE 19th International Workshop on Signal Processing Advances in Wireless Communications (SPAWC), Kalamata, Greece, 2018.
+						
+			\item \underline{N. Doan}, T. S. Kim, H.-J. Lee, and S. I. Chae, "A modified TZ search algorithm for parallel integer motion estimation in high efficiency video coding", IEEE International SoC Design Conference (ISOCC), Gyeongju, South Korea, 2015.
+		\end{enumerate}  
+	\end{itemize} 
+	
+	%% ==============================================================
+	\section{References}
+	\def\halfblankline{\vspace{0.1in}}
+	
+	\halfblankline
+	Prof. \textbf{Warren Gross}
+	\begin{innerlist}
+		\item[] 
+		McGill University, Montr\'eal, Queb\'ec, Canada\\
+		{E-mail: warren.gross@mcgill.ca}
+	\end{innerlist}	
+	
+	\halfblankline
+	Dr. \textbf{Seyyed Ali Hashemi}
+	\begin{innerlist}
+		\item[]
+		Qualcomm, San Diego, California, USA\\
+		{E-mail: hashemi@qti.qualcomm.com}
+	\end{innerlist}
+	
+\end{document}
