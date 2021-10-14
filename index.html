@@ -476,6 +476,140 @@
     </section>
     <!-- awards end -->
 
+<!-- Projects Image begins-->
+    <section id="projectimage" class="content-section text-center">
+	<div class="text-container">
+	    <p><strong>Selected Projects</strong></p>
+	</div>
+    </section>
+    <!-- Projects Image ends -->
+
+    <!-- Projects begins -->
+    <section id="projects" class="projects">
+	<div class="container">
+	    <div class="row" id="projectsheading">
+		<div class="col-lg-12 text-center">
+		    <i class="fa fa-code fa-4x"></i>
+		    <h2>Projects</h2>
+		    <hr>
+		</div>
+	    </div>
+
+	    <br>
+
+	    <div class="row">
+		<div class="col-lg-6 text-center">
+		    <img class="img-responsive img-circle center-block grow" src="img/rsz_nbpne.png" width="150px" alt=""></a>
+		    <h2><span>Joint Neural Belief Propagation Decoder and Channel Equalizer for Polar Codes Decoding</span><br>
+			<small>Dec 2018</small><br>
+			<!-- <small><a target="_blank" href="https://bitbucket.org/nghiadt05/hieratdcappv1/src/master/">BitBucket</a></small> -->
+		    </h2>
+		    <p class="lead" style="text-align:justify;">
+			Polar codes are the first class of codes that was proven to achieve Shannon limit at infinite
+			code length for any binary memoryless channel.
+			In this project, the decoding of polar codes is considered through belief propagation (BP)
+			which can guarantee a high decoding throughput.
+			However, one problem associated with BP decoding is its undesirable performance given a small
+			number of iterations.
+			To address this issue, we propose a neural BP decoder concatenated with a recursive neural
+			network (RNN) based channel noise estimator to impose performance gain compared to some
+			state-of-the-art decoders while maintaining a reasonable decoding latency.
+			At a frame error rate (FER) of 10<sup>-5</sup>, the experiment results illustrate a gain of
+			about 0.25 dB and 0.5 dB over neural BP and neural offset min-sum decoders, respectively.
+			More information can be found in this <a target="_blank" href="./publications/ECSE652Poster.pdf">poster</a>.
+		    </p>
+		</div>
+
+		<div class="col-lg-6 text-center">
+		    <img class="img-responsive img-circle center-block grow" src="img/rsz_cnn.png" width="150px" alt=""></a>
+		    <h2><span>A Baseline VLSI Implementation of CNN</span><br>
+			<small>Dec 2017</small><br>
+			<small><a target="_blank" href="https://github.com/nghiadt05/BaselineCNN">GitHub</a></small>
+		    </h2>
+		    <p class="lead" style="text-align:justify;">
+			In this project, a baseline VLSI implementation of a convolutional neural network (CNN) model trained on the <a target="_blank"
+			    href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR10</a> dataset is studied.
+			This project allows flexible design choices to exploit the complicate trade-off among CNN model
+			complexity, prediction accuracy, fixed-point hardware model and hardware cost.
+			A comparison of a conventional VLSI implementation using multiplication and
+			accumulation (MAC) units and an implementation based on systolic arrays is also considered.
+			The analysis showed that under specific design choices, the MAC-based architecture always has
+			smaller prediction latency than that of the systolic array architecture, while both
+			achitectures preserve the prediction accuracy of the software CNN model.
+			Further details can be found in the project <a target="_blank" href="./publications/Doan_BaselineCNN.pdf">report</a>.                       
+		    </p>
+		</div>
+	    </div>
+	    </br>
+	    </br>
+
+	    <div class="row">
+		<div class="col-lg-6 text-center">
+		    <img class="img-responsive img-circle center-block grow" src="img/rsz_abnormaltrack.png" width="150px"
+			alt=""></a>
+		    <h2><span>Abnormal Pedestrians Behaviour Detection</span><br>
+			<small>August 2016</small><br>
+			<small><a target="_blank" href="https://github.com/nghiadt05/ATDCappV1">GitHub</a></small>
+		    </h2>
+		    <p class="lead" style="text-align:justify;">
+			The amount of data obtained from surveyllance cameras is way beyond human capability to
+			manually annotate abnormal behaviours such as law breaking activities, traffic accidents, etc.
+			Fortunately with the help of deep learning techinques, it is possible to detect such abnormal
+			behaviours in an automated manner.
+			In this project, the abovementioned idea is exploited by incorporating conventional
+			computervision techniques such as super-pixel image segmentation into off-the-shelf deep
+			learning models.
+			First, a human prohibited map is constructed automatically for each camera by an online
+			learning algorithm.
+			This map is used to detect pedestrians who enter the learned restricted regions.
+			Second, another deep learning model is trained to classify abnormal pedestrian behavious by
+			analyzing their trajectories.
+			This model can detect anomalous behaviours regarding the trajactory directions and speeds
+			of the coressponding pedestrians.
+			The experimental results can be found in the following demonstrations: <a target="_blank" href="https://www.youtube.com/watch?v=fgaiMX_agDg">prohibited
+			    area detection</a>, <a target="_blank" href="https://www.youtube.com/watch?v=NWjp76XUA4c">abnormal
+			    trajectory detection</a>.
+		    </p>
+		</div>
+
+		<div class="col-lg-6 text-center">
+		    <img class="img-responsive img-circle center-block grow" src="img/rsz_quadcopter.png" width="150px"
+			alt=""></a>
+		    <h2><span>Quadcopter</span><br>
+			<small>August 2014</small><br>
+			<small><a target="_blank" href="https://bitbucket.org/nghiadt05/quadcopterv2/src/master/">GitHub</a></small>
+		    </h2>
+		    <p class="lead" style="text-align:justify;">
+			Building a quadcopter has been one of my dreams for a long time.
+			Just imagine how cool it is to have your own quadcopter, for which you design your customized PCBs, solder
+			the component and connect everything together with thousands of code lines.
+			I have built my quadcopter nearly from scratch and I would say it is more than just
+			satisfactory when you see it touches the sky.            
+			Through this project I have learned a great deal of knowledge in both theory and practice.
+			The most challenging part of this project is sensor fusion, where you have to apply digital
+			filters to raw sensor data to obtain the geometry state of the quadcopter i.e. yaw, pich, and roll
+			angles.
+			In addition, this project helps me in mastering a wide range of microprocessors, including
+			the ATMEL ATmega and ARM Cortex M-serie chips.
+			You can find it is quite funny to see my quadcopter's <a target="_blank" href="https://www.youtube.com/watch?v=0fP314fJlzo&list=PLCi9WPlUkgh2t0bs-l46DQJkUFqSPvylu&index=19">first
+			    attempt</a> to fly,
+			and <a target="_blank" href="https://www.youtube.com/watch?v=v4bNYTyeoJA&list=PLCi9WPlUkgh2t0bs-l46DQJkUFqSPvylu&index=1">here</a>
+			is the latest version of my quadcopter after almost one year of improvements &#9786;.
+			Please also refer to the project <a target="_blank" href="https://bitbucket.org/nghiadt05/quadcopterv2/src/master/">reposistory</a>
+			and this series of documentary <a target="_blank" href="https://www.youtube.com/playlist?list=PLCi9WPlUkgh2t0bs-l46DQJkUFqSPvylu">videos</a>
+			for more details.
+		    </p>
+		</div>
+	    </div>
+	    </br>
+	    </br>
+
+	</div>
+	</div>
+	<!-- /.container -->
+    </section>
+    <!-- Projects ends -->
+
     <!-- Footer begins -->
     <footer>
         <div class="container text-center">
